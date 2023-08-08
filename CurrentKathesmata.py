@@ -4,9 +4,8 @@ current_time = time.localtime()
 
 def read_psalm(filename):
     print(f"Psalm {filename.strip('src/.txt')}")
-    file = open(filename, 'r')
-    print(file.read())
-    file.close()
+    with open(filename, 'r') as file:
+        print(file.read())
 
 def first_kathisma():
     read_psalm("src/001.txt")
